@@ -19,8 +19,14 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    //显示动画
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = @"Item2";
 }
 @end
